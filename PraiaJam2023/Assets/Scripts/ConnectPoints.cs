@@ -6,11 +6,13 @@ public class ConnectPoints : MonoBehaviour
 {
     [SerializeField] private float speedPointReturn = 20;
 
+    private GameManager _gameManagerScript;
     private Draggable _draggableScript;
     private Vector3 _initialPointPosition;
 
     private void Awake()
     {
+        _gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
         _draggableScript = GetComponent<Draggable>();
         _initialPointPosition = transform.position;
     }
@@ -20,17 +22,21 @@ public class ConnectPoints : MonoBehaviour
         PointReturning();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag(tag) && !_draggableScript.isDragging)
+        if (collision.CompareTag(tag) && !_gameManagerScript.isDragging)
         {
-
+            foreach (GameObject bridge in _gameManagerScript.bridges)
+            {
+                Debug.Log("Stonks");
+                if (bridge.name == tag) bridge.SetActive(true);
+            }
         }
     }
 
     private void PointReturning()
     {
-        if (transform.position != _initialPointPosition && !_draggableScript.isDragging)
+        if (transform.position != _initialPointPosition && !_gameManagerScript.isDragging)
         {
             transform.position = Vector3.MoveTowards(transform.position, _initialPointPosition, speedPointReturn * Time.deltaTime);
         }

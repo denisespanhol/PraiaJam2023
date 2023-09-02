@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pair1
-  - Pair2
-  - Pair3
+  - Bridge 01
+  - Bridge 02
+  - Bridge 03
   layers:
   - Default
   - TransparentFX

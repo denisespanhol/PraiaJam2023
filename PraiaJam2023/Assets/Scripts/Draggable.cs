@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-    public bool isDragging = false;
     private Vector3 mousePositionOffset;
+
+    private GameManager _gameManagerScript;
+
+    private void Awake()
+    {
+        _gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+    }
 
     private void OnMouseDown()
     {
         // Capture the mouse offset;
         mousePositionOffset = transform.position - GetMouseWorldPosition();
-        isDragging = true;
+        _gameManagerScript.isDragging = true;
     }
 
     private void OnMouseDrag()
@@ -21,7 +27,7 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseUp()
     {
-        isDragging = false;
+        _gameManagerScript.isDragging = false;
     }
 
     private Vector3 GetMouseWorldPosition()

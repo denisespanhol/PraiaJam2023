@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] bridges;
+    public GameObject[] bridges;
+    public bool isDragging = false;
 }
