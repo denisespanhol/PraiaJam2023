@@ -225,11 +225,12 @@ GameObject:
   m_Component:
   - component: {fileID: 673223436}
   - component: {fileID: 673223437}
-  - component: {fileID: 673223438}
   - component: {fileID: 673223439}
+  - component: {fileID: 673223438}
+  - component: {fileID: 673223440}
   m_Layer: 0
   m_Name: Connecting Point 05
-  m_TagString: Untagged
+  m_TagString: Pair3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,6 +360,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &673223440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673223435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be89dc219e81f4b9f3b2476a5a6599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPointReturn: 20
 --- !u!1 &772321031
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +593,7 @@ GameObject:
   - component: {fileID: 1165226260}
   m_Layer: 0
   m_Name: Connecting Point 01
-  m_TagString: Untagged
+  m_TagString: Pair1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -767,11 +781,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1437062897}
   - component: {fileID: 1437062898}
-  - component: {fileID: 1437062899}
   - component: {fileID: 1437062900}
+  - component: {fileID: 1437062899}
+  - component: {fileID: 1437062901}
   m_Layer: 0
   m_Name: Connecting Point 04
-  m_TagString: Untagged
+  m_TagString: Pair2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,6 +916,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1437062901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437062896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be89dc219e81f4b9f3b2476a5a6599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPointReturn: 20
 --- !u!1 &1725902622
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,11 +1023,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1776787444}
   - component: {fileID: 1776787445}
-  - component: {fileID: 1776787446}
   - component: {fileID: 1776787447}
+  - component: {fileID: 1776787446}
+  - component: {fileID: 1776787448}
   m_Layer: 0
   m_Name: Connecting Point 02
-  m_TagString: Untagged
+  m_TagString: Pair1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1129,6 +1158,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1776787448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776787443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be89dc219e81f4b9f3b2476a5a6599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPointReturn: 20
 --- !u!1 &1956455237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,11 +1181,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1956455238}
   - component: {fileID: 1956455239}
-  - component: {fileID: 1956455240}
   - component: {fileID: 1956455241}
+  - component: {fileID: 1956455240}
+  - component: {fileID: 1956455242}
   m_Layer: 0
   m_Name: Connecting Point 03
-  m_TagString: Untagged
+  m_TagString: Pair2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1273,6 +1316,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1956455242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956455237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be89dc219e81f4b9f3b2476a5a6599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPointReturn: 20
 --- !u!1 &2068632944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,11 +1339,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2068632945}
   - component: {fileID: 2068632946}
-  - component: {fileID: 2068632947}
   - component: {fileID: 2068632948}
+  - component: {fileID: 2068632947}
+  - component: {fileID: 2068632949}
   m_Layer: 0
   m_Name: Connecting Point 06
-  m_TagString: Untagged
+  m_TagString: Pair3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1417,3 +1474,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2068632949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068632944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be89dc219e81f4b9f3b2476a5a6599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPointReturn: 20
