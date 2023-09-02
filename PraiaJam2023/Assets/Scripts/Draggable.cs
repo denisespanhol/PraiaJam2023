@@ -5,7 +5,6 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
     private Vector3 mousePositionOffset;
-
     private GameManager _gameManagerScript;
 
     private void Awake()

@@ -22,13 +22,12 @@ public class ConnectPoints : MonoBehaviour
         PointReturning();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(tag) && !_gameManagerScript.isDragging)
         {
             foreach (GameObject bridge in _gameManagerScript.bridges)
             {
-                Debug.Log("Stonks");
                 if (bridge.name == tag) bridge.SetActive(true);
             }
         }
