@@ -20,6 +20,14 @@ public class ConnectPoints : MonoBehaviour
         PointReturning();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag(tag) && !_draggableScript.isDragging)
+        {
+
+        }
+    }
+
     private void PointReturning()
     {
         if (transform.position != _initialPointPosition && !_draggableScript.isDragging)
