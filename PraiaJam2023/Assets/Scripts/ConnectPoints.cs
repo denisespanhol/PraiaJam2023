@@ -5,11 +5,14 @@ using UnityEngine;
 public class ConnectPoints : MonoBehaviour
 {
     [SerializeField] private float speedPointReturn = 20;
-    private Vector3 initialPointPosition;
+
+    private Draggable _draggableScript;
+    private Vector3 _initialPointPosition;
 
     private void Awake()
     {
-        initialPointPosition = transform.position;
+        _draggableScript = GetComponent<Draggable>();
+        _initialPointPosition = transform.position;
     }
 
     private void Update()
@@ -19,9 +22,9 @@ public class ConnectPoints : MonoBehaviour
 
     private void PointReturning()
     {
-        if (transform.position != initialPointPosition)
+        if (transform.position != _initialPointPosition && !_draggableScript.isDragging)
         {
-            transform.position = Vector3.MoveTowards(transform.position, initialPointPosition, speedPointReturn * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _initialPointPosition, speedPointReturn * Time.deltaTime);
         }
     }
 }
