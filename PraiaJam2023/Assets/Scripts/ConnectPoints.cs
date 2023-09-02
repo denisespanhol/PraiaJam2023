@@ -28,7 +28,11 @@ public class ConnectPoints : MonoBehaviour
         {
             foreach (GameObject bridge in _gameManagerScript.bridges)
             {
-                if (bridge.name == tag) bridge.SetActive(true);
+                if (bridge.name == tag)
+                {
+                    bridge.SetActive(true);
+                    _gameManagerScript.activeBridge = bridge;
+                }
             }
         }
     }
