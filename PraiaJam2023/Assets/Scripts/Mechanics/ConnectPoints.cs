@@ -7,13 +7,13 @@ public class ConnectPoints : MonoBehaviour
     [SerializeField] private float speedPointReturn = 20;
 
     private GameManager _gameManagerScript;
-    private Draggable _draggableScript;
+    private Nightmare _nightmareScript;
     private Vector3 _initialPointPosition;
 
     private void Awake()
     {
         _gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        _draggableScript = GetComponent<Draggable>();
+        _nightmareScript = GetComponent<Nightmare>();
         _initialPointPosition = transform.position;
     }
 
