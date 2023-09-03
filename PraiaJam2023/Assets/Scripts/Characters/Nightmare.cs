@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Nightmare : MonoBehaviour
 {
-    public PathsToWalk[] paths;
+    public GameObject[] paths;
+    public GameObject islandStaying;
 
-    [SerializeField] GameObject firstBridge;
-    [SerializeField] GameObject secondBridge;
-    [SerializeField] GameObject thirdBridge;
     [SerializeField] private float nightmareSpeed = 2;
 
     private GameManager _gameManagerScript;
-    private GameObject _islandStaying;
     private int _bridgeIndex1 = 0;
     private int _bridgeIndex2 = 0;
     private int _bridgeIndex3 = 0;
@@ -25,73 +22,129 @@ public class Nightmare : MonoBehaviour
 
     private void Update()
     {
+        NightmareDestination();
+        PathManager();
         NightmareWalk();
     }
 
     private void NightmareWalk()
     {
-        if (_gameManagerScript.activeBridge == null) return;
+        if (_gameManagerScript.activeBridge == null || _gameManagerScript.activeDestination == null) return;
 
+        GameObject firstBridge = _gameManagerScript.bridges[0];
+        GameObject secondBridge = _gameManagerScript.bridges[1];
+        GameObject thirdBridge = _gameManagerScript.bridges[2];
         GameObject activeBridge = _gameManagerScript.activeBridge;
-        GameObject[] rightPath;
+        GameObject activeDestination = _gameManagerScript.activeDestination;
 
-        // Makes the nightmare walk to the first bridge when it's active
-        if (activeBridge.name == firstBridge.name && _islandStaying.name != "Dream Land 2")
+        if (_bridgeIndex1 < paths.Length && activeDestination.name == "Dreaming One" && firstBridge.activeInHierarchy)
         {
-            rightPath = paths[0].targetsToWalk;
+            Vector2 targetPosition = paths[_bridgeIndex1].transform.position;
 
-            if (_bridgeIndex1 < rightPath.Length)
-            {
-                Vector2 targetPosition = rightPath[_bridgeIndex1].transform.position;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
-
-                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex1 += 1;
-            }
-
+            if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex1 += 1;
         }
 
-        // Makes the nightmare walk to the second bridge when it's active
-        if (activeBridge.name == secondBridge.name)
+        if (_bridgeIndex2 < paths.Length && activeDestination.name == "IslandCenter2" && secondBridge.activeInHierarchy)
         {
-            rightPath = paths[1].targetsToWalk;
+            Vector2 targetPosition = paths[_bridgeIndex2].transform.position;
 
-            if (_bridgeIndex2 < rightPath.Length)
-            {
-                Vector2 targetPosition = rightPath[_bridgeIndex2].transform.position;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
-
-                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex2 += 1;
-            }
-
+            if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex2 += 1;
         }
 
-        // Makes the nightmare walk to the third bridge when it's active
-        if (activeBridge.name == thirdBridge.name && _islandStaying.name != "Dream Land 1")
+        if (_bridgeIndex3 < paths.Length && activeDestination.name == "Dreaming One" && thirdBridge.activeInHierarchy)
         {
-            rightPath = paths[2].targetsToWalk;
+            Vector2 targetPosition = paths[_bridgeIndex3].transform.position;
 
-            if (_bridgeIndex3 < rightPath.Length)
-            {
-                Vector2 targetPosition = rightPath[_bridgeIndex3].transform.position;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
+            if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex3 += 1;
+        }
 
-                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex3 += 1;
-            }
+        if (_bridgeIndex4 < paths.Length && activeDestination.name == "IslandCenter1" && secondBridge.activeInHierarchy)
+        {
+            Vector2 targetPosition = paths[_bridgeIndex4].transform.position;
 
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
+
+            if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex4 += 1;
+        }
+    }
+
+    private void NightmareDestination()
+    {
+        GameObject firstBridge = _gameManagerScript.bridges[0];
+        GameObject secondBridge = _gameManagerScript.bridges[1];
+        GameObject thirdBridge = _gameManagerScript.bridges[2];
+        GameObject activeBridge = _gameManagerScript.activeBridge;
+
+        if (islandStaying == null) return;
+
+        if (islandStaying.name == "IslandCenter1" && firstBridge.activeInHierarchy)
+        {
+            _gameManagerScript.activeDestination = _gameManagerScript.destination[0];
+        }
+
+        if (islandStaying.name == "IslandCenter1" && secondBridge.activeInHierarchy)
+        {
+            _gameManagerScript.activeDestination = _gameManagerScript.destination[2];
+        }
+
+        if (islandStaying.name == "IslandCenter2" && thirdBridge.activeInHierarchy)
+        {
+            _gameManagerScript.activeDestination = _gameManagerScript.destination[0];
+        }
+
+        if (islandStaying.name == "IslandCenter2" && secondBridge.activeInHierarchy)
+        {
+            _gameManagerScript.activeDestination = _gameManagerScript.destination[1];
+        }
+    }
+
+    private void PathManager()
+    {
+        GameObject firstBridge = _gameManagerScript.bridges[0];
+        GameObject secondBridge = _gameManagerScript.bridges[1];
+        GameObject thirdBridge = _gameManagerScript.bridges[2];
+        GameObject activeBridge = _gameManagerScript.activeBridge;
+        GameObject activeDestination = _gameManagerScript.activeDestination;
+
+        if (activeBridge == null || activeDestination == null) return;
+
+        if (activeBridge.name == firstBridge.name)
+        { 
+            paths[0] = _gameManagerScript.connectionPoints[1];
+            paths[1] = _gameManagerScript.connectionPoints[0];
+            paths[2] = _gameManagerScript.destination[0];
+        } 
+
+        if (activeBridge.name == secondBridge.name && activeDestination.name == "IslandCenter2")
+        {
+            paths[0] = _gameManagerScript.connectionPoints[2];
+            paths[1] = _gameManagerScript.connectionPoints[3];
+            paths[2] = _gameManagerScript.destination[2];
+        }
+
+        if (activeBridge.name == thirdBridge.name)
+        {
+            paths[0] = _gameManagerScript.connectionPoints[4];
+            paths[1] = _gameManagerScript.connectionPoints[5];
+            paths[2] = _gameManagerScript.destination[0];
+        }
+
+        if (activeBridge.name == secondBridge.name && activeDestination.name == "IslandCenter1")
+        {
+            paths[0] = _gameManagerScript.connectionPoints[3];
+            paths[1] = _gameManagerScript.connectionPoints[2];
+            paths[2] = _gameManagerScript.destination[1];
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Island")) _islandStaying = collision.gameObject;
+        if (collision.CompareTag("Island")) islandStaying = collision.gameObject;
     }
-}
-
-[System.Serializable]
-public struct PathsToWalk
-{
-    public GameObject[] targetsToWalk;
 }
