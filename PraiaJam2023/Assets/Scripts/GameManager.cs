@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] bridges;
+    public GameObject[] connectionPoints;
+    public GameObject[] destination;
     public GameObject activeBridge;
+    public GameObject activeDestination;
     public bool isDragging = false;
 
     private void Update()
