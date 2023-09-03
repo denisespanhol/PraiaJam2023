@@ -13,8 +13,10 @@ public class Nightmare : MonoBehaviour
 
     private GameManager _gameManagerScript;
     private GameObject _islandStaying;
-
-    private int targetIndex = 0;
+    private int _bridgeIndex1 = 0;
+    private int _bridgeIndex2 = 0;
+    private int _bridgeIndex3 = 0;
+    private int _bridgeIndex4 = 0;
 
     private void Awake()
     {
@@ -38,13 +40,13 @@ public class Nightmare : MonoBehaviour
         {
             rightPath = paths[0].targetsToWalk;
 
-            if (targetIndex < rightPath.Length)
+            if (_bridgeIndex1 < rightPath.Length)
             {
-                Vector2 targetPosition = rightPath[targetIndex].transform.position;
+                Vector2 targetPosition = rightPath[_bridgeIndex1].transform.position;
 
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
-                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) targetIndex += 1;
+                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex1 += 1;
             }
 
         }
@@ -54,29 +56,29 @@ public class Nightmare : MonoBehaviour
         {
             rightPath = paths[1].targetsToWalk;
 
-            if (targetIndex < rightPath.Length)
+            if (_bridgeIndex2 < rightPath.Length)
             {
-                Vector2 targetPosition = rightPath[targetIndex].transform.position;
+                Vector2 targetPosition = rightPath[_bridgeIndex2].transform.position;
 
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
-                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) targetIndex += 1;
+                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex2 += 1;
             }
 
         }
 
-        // Makes the nightmare walk to the second bridge when it's active
+        // Makes the nightmare walk to the third bridge when it's active
         if (activeBridge.name == thirdBridge.name && _islandStaying.name != "Dream Land 1")
         {
             rightPath = paths[2].targetsToWalk;
 
-            if (targetIndex < rightPath.Length)
+            if (_bridgeIndex3 < rightPath.Length)
             {
-                Vector2 targetPosition = rightPath[targetIndex].transform.position;
+                Vector2 targetPosition = rightPath[_bridgeIndex3].transform.position;
 
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
-                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) targetIndex += 1;
+                if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex3 += 1;
             }
 
         }
