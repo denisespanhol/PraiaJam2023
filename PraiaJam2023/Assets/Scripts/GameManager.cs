@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,9 +14,18 @@ public class GameManager : MonoBehaviour
     public bool isDragging = false;
     public bool isABridgeActive = false;
     public Coroutine closeTheBridgeCoroutine;
+    public TextMeshProUGUI bridgeCounterText;
+    public TextMeshProUGUI dreamCounterText;
+
+    [SerializeField] private int _bridgesUsed = 0;
+    [SerializeField] private int _maxAllowed = 3;
+
+    [SerializeField] private int _dreamsCollected = 0;
+    [SerializeField] private int _maxDreams = 2;
 
     [SerializeField] private float secondsToCloseTheBridge = 8f;
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject gameOverUI;
 
 
     private void Update()
@@ -22,6 +33,11 @@ public class GameManager : MonoBehaviour
         CheckIfAnyBridgeIsActive();
         CloseAllBridgesAfterATime();
         ShowPauseMenu();
+
+        if (_maxAllowed == _maxAllowed + 1)
+        {
+            GameOver();
+        }
     }
 
     private void CheckIfAnyBridgeIsActive()
@@ -60,5 +76,23 @@ public class GameManager : MonoBehaviour
         if (Time.timeScale == 0) pauseMenu.SetActive(true);
 
         else if (Time.timeScale == 1) pauseMenu.SetActive(false);
+    }
+
+    public void UpdateBridgeCounter()
+    {
+        _bridgesUsed += 1;
+        bridgeCounterText.text = "Pontes Usadas: " + _bridgesUsed + "/" + _maxAllowed;
+    }
+
+    public void UpdateDreamCounter()
+    {
+        _dreamsCollected += 1;
+        dreamCounterText.text = "Sonhos Guiados: " + _dreamsCollected + "/" + _maxDreams;
+    }
+
+    public void GameOver()
+    {
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0;
     }
 }

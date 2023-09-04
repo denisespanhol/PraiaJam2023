@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class DreamingOne : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOverUI;
+    private GameManager _gameManagerScript;
+
+    private void Awake()
+    {
+        _gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Nightmare"))
         {
-            gameOverUI.SetActive(true);
+            _gameManagerScript.GameOver();
+        }
+
+        if (collision.CompareTag("Dream"))
+        {
+            _gameManagerScript.UpdateDreamCounter();
         }
     }
 }
