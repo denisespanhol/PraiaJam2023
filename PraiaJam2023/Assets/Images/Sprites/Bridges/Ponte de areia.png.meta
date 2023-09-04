@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: d4b4b38f7f13c0e49b7449055ebc3aa9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bridge01
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 17
+        width: 131
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78365b67041c0b043a81d14399e4c6a8
+      internalID: -942083883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge02
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 17
+        width: 131
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85f7aeaea728ec498617236b5b9d496
+      internalID: 1162531953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge03
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 17
+        width: 131
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c55736e130acb64ca8dc4d315e8e7ff
+      internalID: 655996738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge04
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 17
+        width: 131
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f29fb0d62562844db2063e5384b6b00
+      internalID: 417485777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge05
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 17
+        width: 131
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af942a55f15a6b740ab1099e9d86f53e
+      internalID: 1033930636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpBridge03
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 19
+        width: 194
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e4851cac28f3c4493e7e8e91b43f03
+      internalID: 648042990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpBridge01
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 17
+        width: 194
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefe9faf6bf5b224181eec42cd922fc4
+      internalID: 1024672315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpBridge02
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 17
+        width: 204
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40135c721c6eef64caf235561a3abc30
+      internalID: 701858968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpBridge04
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 18
+        width: 194
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939721c3264a400418ae84d4d6fbb609
+      internalID: -1724050433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpBridge05
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 17
+        width: 194
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a760eafcccef945b5afd6aba98558f
+      internalID: 1376611341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bridge01: -942083883
+      Bridge02: 1162531953
+      Bridge03: 655996738
+      Bridge04: 417485777
+      Bridge05: 1033930636
+      OpBridge01: 1024672315
+      OpBridge02: 701858968
+      OpBridge03: 648042990
+      OpBridge04: -1724050433
+      OpBridge05: 1376611341
+      Ponte de areia_10: 1004418966
+      Ponte de areia_11: -1951226210
+      Ponte de areia_12: 2094004056
+      Ponte de areia_13: -1873335474
+      Ponte de areia_14: -495289371
+      Ponte de areia_15: -1824359474
+      Ponte de areia_16: 1138309137
+      Ponte de areia_17: 946880641
+      Ponte de areia_18: -307759280
+      Ponte de areia_19: -780437128
+      Ponte de areia_20: -1857259049
+      Ponte de areia_21: 1094229874
+      Ponte de areia_22: 1598373710
+      Ponte de areia_23: 739655873
+      Ponte de areia_24: 978143998
+      Ponte de areia_25: 517356218
+      Ponte de areia_26: 429652956
+      Ponte de areia_27: 1465038849
+      Ponte de areia_28: -1934960635
+      Ponte de areia_29: 1029807613
+      Ponte de areia_30: 1153396316
+      Ponte de areia_31: 1972279736
+      Ponte de areia_32: 474779813
+      Ponte de areia_33: -197203226
+      Ponte de areia_34: -105241428
+      Ponte de areia_35: -2050092055
+      Ponte de areia_36: -590875011
+      Ponte de areia_37: -1149169442
+      Ponte de areia_38: -889058363
+      Ponte de areia_39: -28274032
+      Ponte de areia_40: -850515399
+      Ponte de areia_41: -2006326916
+      Ponte de areia_42: 1861350093
+      Ponte de areia_43: 230794373
+      Ponte de areia_49: 2026570763
+      Ponte de areia_5: -1374033669
+      Ponte de areia_50: -1349082311
+      Ponte de areia_51: -2102155789
+      Ponte de areia_52: -229876820
+      Ponte de areia_53: 49692091
+      Ponte de areia_54: 403076300
+      Ponte de areia_55: 788008695
+      Ponte de areia_56: -560165940
+      Ponte de areia_57: -424305622
+      Ponte de areia_58: -362760888
+      Ponte de areia_59: 1549734295
+      Ponte de areia_6: -509993874
+      Ponte de areia_60: 1957854232
+      Ponte de areia_61: -1824971045
+      Ponte de areia_62: -1794747809
+      Ponte de areia_63: 103804943
+      Ponte de areia_7: -1043713279
+      Ponte de areia_8: -954529106
+      Ponte de areia_9: -1049658835
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

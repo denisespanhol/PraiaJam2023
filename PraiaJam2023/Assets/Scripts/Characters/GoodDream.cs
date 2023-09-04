@@ -28,9 +28,9 @@ public class GoodDream : MonoBehaviour
 
         if (theBridgeForTheMainLand.name == _gameManagerScript.activeBridge.name && targetIndex < targetsToWalk.Length)
         {
-            Vector2 targetPosition = targetsToWalk[targetIndex].transform.position;
+            Vector3 targetPosition = new Vector3(targetsToWalk[targetIndex].transform.position.x, targetsToWalk[targetIndex].transform.position.y, transform.position.z);
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, goodDreamSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, goodDreamSpeed * Time.deltaTime);
 
             if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) targetIndex += 1;
         }

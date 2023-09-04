@@ -39,36 +39,36 @@ public class Nightmare : MonoBehaviour
 
         if (_bridgeIndex1 < paths.Length && activeDestination.name == "Dreaming One" && firstBridge.activeInHierarchy)
         {
-            Vector2 targetPosition = paths[_bridgeIndex1].transform.position;
+            Vector3 targetPosition = new Vector3(paths[_bridgeIndex1].transform.position.x, paths[_bridgeIndex1].transform.position.y, transform.position.z);
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
             if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex1 += 1;
         }
 
         if (_bridgeIndex2 < paths.Length && activeDestination.name == "IslandCenter2" && secondBridge.activeInHierarchy)
         {
-            Vector2 targetPosition = paths[_bridgeIndex2].transform.position;
+            Vector3 targetPosition = new Vector3(paths[_bridgeIndex2].transform.position.x, paths[_bridgeIndex2].transform.position.y, transform.position.z);
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
             if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex2 += 1;
         }
 
         if (_bridgeIndex3 < paths.Length && activeDestination.name == "Dreaming One" && thirdBridge.activeInHierarchy)
         {
-            Vector2 targetPosition = paths[_bridgeIndex3].transform.position;
+            Vector3 targetPosition = new Vector3(paths[_bridgeIndex3].transform.position.x, paths[_bridgeIndex3].transform.position.y, transform.position.z);
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
             if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex3 += 1;
         }
 
         if (_bridgeIndex4 < paths.Length && activeDestination.name == "IslandCenter1" && secondBridge.activeInHierarchy)
         {
-            Vector2 targetPosition = paths[_bridgeIndex4].transform.position;
+            Vector3 targetPosition = new Vector3(paths[_bridgeIndex4].transform.position.x, paths[_bridgeIndex4].transform.position.y, transform.position.z);
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, nightmareSpeed * Time.deltaTime);
 
             if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) _bridgeIndex4 += 1;
         }
