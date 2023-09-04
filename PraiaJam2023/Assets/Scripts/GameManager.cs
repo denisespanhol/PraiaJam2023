@@ -14,12 +14,16 @@ public class GameManager : MonoBehaviour
     public Coroutine closeTheBridgeCoroutine;
 
     [SerializeField] private float secondsToCloseTheBridge = 8f;
+    [SerializeField] GameObject pauseMenu;
+
 
     private void Update()
     {
         CheckIfAnyBridgeIsActive();
         CloseAllBridgesAfterATime();
+        ShowPauseMenu();
     }
+
     private void CheckIfAnyBridgeIsActive()
     {
         foreach(GameObject bridge in bridges)
@@ -49,5 +53,12 @@ public class GameManager : MonoBehaviour
             if (bridge.activeInHierarchy) bridge.SetActive(false);
             isABridgeActive = false;
         }
+    }
+
+    private void ShowPauseMenu()
+    {
+        if (Time.timeScale == 0) pauseMenu.SetActive(true);
+
+        else if (Time.timeScale == 1) pauseMenu.SetActive(false);
     }
 }
