@@ -143,8 +143,17 @@ public class Nightmare : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Island")) islandStaying = collision.gameObject;
+        if (collision.CompareTag("Island"))
+        {
+            foreach(GameObject bridge in _gameManagerScript.bridges)
+            {
+                if (bridge.activeInHierarchy) bridge.SetActive(false);
+            }
+
+            _gameManagerScript.isABridgeActive = false;
+            islandStaying = collision.gameObject;
+        }
     }
 }

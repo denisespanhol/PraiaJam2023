@@ -21,7 +21,7 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPosition() + mousePositionOffset;
+        if (!_gameManagerScript.isABridgeActive) transform.position = GetMouseWorldPosition() + mousePositionOffset;
     }
 
     private void OnMouseUp()

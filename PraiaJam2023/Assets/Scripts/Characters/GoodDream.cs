@@ -35,4 +35,16 @@ public class GoodDream : MonoBehaviour
             if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) targetIndex += 1;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Island"))
+        {
+            foreach (GameObject bridge in _gameManagerScript.bridges)
+            {
+                if (bridge.activeInHierarchy) bridge.SetActive(false);
+            }
+        }
+        _gameManagerScript.isABridgeActive = false;
+    }
 }

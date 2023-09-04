@@ -10,17 +10,17 @@ public class GameManager : MonoBehaviour
     public GameObject activeBridge;
     public GameObject activeDestination;
     public bool isDragging = false;
+    public bool isABridgeActive = false;
 
     private void Update()
     {
-        MakeJustOneBridgeActive();
+        checkIfAnyBridgeIsActive();
     }
-
-    private void MakeJustOneBridgeActive()
+    private void checkIfAnyBridgeIsActive()
     {
-        foreach (GameObject bridge in bridges)
+        foreach(GameObject bridge in bridges)
         {
-            if (bridge.activeInHierarchy && bridge.name != activeBridge.name) bridge.SetActive(false); 
+            if (bridge.activeInHierarchy) isABridgeActive = true;
         }
     }
 }
