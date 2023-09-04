@@ -44,7 +44,8 @@ public class GoodDream : MonoBehaviour
             {
                 if (bridge.activeInHierarchy) bridge.SetActive(false);
             }
+
+            _gameManagerScript.isABridgeActive = false;
         }
-        _gameManagerScript.isABridgeActive = false;
     }
 }

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject activeDestination;
     public bool isDragging = false;
     public bool isABridgeActive = false;
+    public Coroutine closeTheBridgeCoroutine;
 
     [SerializeField] private float secondsToCloseTheBridge = 8f;
 
@@ -29,13 +30,20 @@ public class GameManager : MonoBehaviour
 
     private void CloseAllBridgesAfterATime()
     {
-        if (isABridgeActive) StartCoroutine(CloseTheBridge());
+        if (isABridgeActive) closeTheBridgeCoroutine = StartCoroutine(CloseTheBridge());
+        else if (!isABridgeActive && closeTheBridgeCoroutine != null)
+        {
+            StopAllCoroutines();
+            // StopCoroutine(closeTheBridgeCoroutine);
+            Debug.Log("Coroutine was stopped");
+        }
     }
 
     IEnumerator CloseTheBridge()
     {
         yield return new WaitForSeconds(secondsToCloseTheBridge);
 
+        Debug.Log("coroio");
         foreach (GameObject bridge in bridges)
         {
             if (bridge.activeInHierarchy) bridge.SetActive(false);
