@@ -16,10 +16,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        checkIfAnyBridgeIsActive();
-        closeAllBridgesAfterATime();
+        CheckIfAnyBridgeIsActive();
+        CloseAllBridgesAfterATime();
     }
-    private void checkIfAnyBridgeIsActive()
+    private void CheckIfAnyBridgeIsActive()
     {
         foreach(GameObject bridge in bridges)
         {
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void closeAllBridgesAfterATime()
+    private void CloseAllBridgesAfterATime()
     {
         if (isABridgeActive) StartCoroutine(CloseTheBridge());
     }
