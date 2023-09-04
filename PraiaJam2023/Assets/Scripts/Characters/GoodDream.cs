@@ -38,7 +38,7 @@ public class GoodDream : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Island"))
+        if (collision.CompareTag("Island") || collision.CompareTag("DreamingOne"))
         {
             foreach (GameObject bridge in _gameManagerScript.bridges)
             {

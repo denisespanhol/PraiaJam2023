@@ -21,6 +21,7 @@ public class DreamingOne : MonoBehaviour
         if (collision.CompareTag("Dream"))
         {
             _gameManagerScript.UpdateDreamCounter();
+            collision.gameObject.SetActive(false);
         }
     }
 }

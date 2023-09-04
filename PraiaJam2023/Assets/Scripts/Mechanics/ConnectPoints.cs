@@ -32,6 +32,7 @@ public class ConnectPoints : MonoBehaviour
                 {
                     bridge.SetActive(true);
                     _gameManagerScript.activeBridge = bridge;
+                    _gameManagerScript.UpdateBridgeCounter();
                 }
             }
         }

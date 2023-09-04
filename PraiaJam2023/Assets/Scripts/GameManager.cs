@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI bridgeCounterText;
     public TextMeshProUGUI dreamCounterText;
 
-    [SerializeField] private int _bridgesUsed = 0;
+    [SerializeField] private float _bridgesUsed = 0;
     [SerializeField] private int _maxAllowed = 3;
 
     [SerializeField] private int _dreamsCollected = 0;
@@ -26,15 +26,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float secondsToCloseTheBridge = 8f;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject victoryUI;
 
+    private bool _isGameOver = false;
+
+
+    private void Awake()
+    {
+        _isGameOver = false;
+    }
 
     private void Update()
     {
         CheckIfAnyBridgeIsActive();
         CloseAllBridgesAfterATime();
         ShowPauseMenu();
+        Victory();
 
-        if (_maxAllowed == _maxAllowed + 1)
+        if (_bridgesUsed > _maxAllowed)
         {
             GameOver();
         }
@@ -80,7 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateBridgeCounter()
     {
-        _bridgesUsed += 1;
+        _bridgesUsed += 0.5f;
         bridgeCounterText.text = "Pontes Usadas: " + _bridgesUsed + "/" + _maxAllowed;
     }
 
@@ -92,7 +101,12 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        _isGameOver = true;
         gameOverUI.SetActive(true);
-        Time.timeScale = 0;
+    }
+
+    public void Victory()
+    {
+        if (_dreamsCollected == _maxDreams && !_isGameOver) victoryUI.SetActive(true);
     }
 }

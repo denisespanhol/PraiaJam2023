@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1282254184}
     m_Modifications:
+    - target: {fileID: 300292229558953325, guid: 3b4aefcae0868354eb6e087694057b4f, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7006768794692434344, guid: 3b4aefcae0868354eb6e087694057b4f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -221,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7519500076924488224, guid: 3b4aefcae0868354eb6e087694057b4f, type: 3}
       propertyPath: m_text
-      value: Controls
+      value: Sobre
       objectReference: {fileID: 0}
     - target: {fileID: 7519500076924488224, guid: 3b4aefcae0868354eb6e087694057b4f, type: 3}
       propertyPath: m_fontSize
