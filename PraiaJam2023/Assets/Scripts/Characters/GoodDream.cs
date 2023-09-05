@@ -24,11 +24,14 @@ public class GoodDream : MonoBehaviour
 
     private void GoodDreamWalk()
     {
-        if (_gameManagerScript.activeBridge == null) return;
+        GameObject activeBridge = _gameManagerScript.activeBridge;
 
-        if (theBridgeForTheMainLand.name == _gameManagerScript.activeBridge.name && targetIndex < targetsToWalk.Length)
+        if (activeBridge == null) return;
+
+        Vector3 targetPosition = new Vector3(targetsToWalk[targetIndex].transform.position.x, targetsToWalk[targetIndex].transform.position.y, transform.position.z);
+        
+        if (theBridgeForTheMainLand.name == activeBridge.name && targetIndex < targetsToWalk.Length)
         {
-            Vector3 targetPosition = new Vector3(targetsToWalk[targetIndex].transform.position.x, targetsToWalk[targetIndex].transform.position.y, transform.position.z);
 
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, goodDreamSpeed * Time.deltaTime);
 

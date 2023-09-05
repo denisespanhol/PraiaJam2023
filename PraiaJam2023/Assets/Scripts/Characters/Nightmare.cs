@@ -98,33 +98,32 @@ public class Nightmare : MonoBehaviour
         GameObject firstBridge = _gameManagerScript.bridges[0];
         GameObject secondBridge = _gameManagerScript.bridges[1];
         GameObject thirdBridge = _gameManagerScript.bridges[2];
-        GameObject activeBridge = _gameManagerScript.activeBridge;
         GameObject activeDestination = _gameManagerScript.activeDestination;
 
-        if (activeBridge == null || activeDestination == null) return;
+        if (activeDestination == null) return;
 
-        if (activeBridge.name == firstBridge.name)
+        if (firstBridge.activeInHierarchy)
         { 
             paths[0] = _gameManagerScript.connectionPoints[1];
             paths[1] = _gameManagerScript.connectionPoints[0];
             paths[2] = _gameManagerScript.destination[0];
         } 
 
-        if (activeBridge.name == secondBridge.name && activeDestination.name == "IslandCenter2")
+        if (secondBridge.activeInHierarchy && activeDestination.name == "IslandCenter2")
         {
             paths[0] = _gameManagerScript.connectionPoints[2];
             paths[1] = _gameManagerScript.connectionPoints[3];
             paths[2] = _gameManagerScript.destination[2];
         }
 
-        if (activeBridge.name == thirdBridge.name)
+        if (thirdBridge.activeInHierarchy)
         {
             paths[0] = _gameManagerScript.connectionPoints[4];
             paths[1] = _gameManagerScript.connectionPoints[5];
             paths[2] = _gameManagerScript.destination[0];
         }
 
-        if (activeBridge.name == secondBridge.name && activeDestination.name == "IslandCenter1")
+        if (secondBridge.activeInHierarchy && activeDestination.name == "IslandCenter1")
         {
             paths[0] = _gameManagerScript.connectionPoints[3];
             paths[1] = _gameManagerScript.connectionPoints[2];
